@@ -1,0 +1,488 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./mixin.scss";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+.small-container{
+    max-width: 110rem;
+    margin: 0 auto;
+}
+.header-upside {
+  background-color: $bgcolor;
+  border-bottom: 0.2rem solid $primary-text;
+  .m-text {
+    display: none;
+  }
+  .header-top {
+    @include dflex;
+    justify-content: space-between;
+    font-size: $fsize-small;
+    padding: 1.5rem;
+
+    .top-left-header {
+      p{
+        color: $primary-text;
+        i{
+          margin-right: 1rem
+        }
+      }
+      .search-box{
+        display: none;
+        #search-here{
+          width: 35rem;
+          padding: 1.2rem;
+          outline: none;
+          margin-top:2rem;
+        }
+        &::after{
+          content: '';
+          position: relative;
+          z-index: 1;
+          display: inline-block;
+          background-image: url(../images/up-arrow.png);
+          width: 2.4rem;
+          height: 2.4rem;
+          left: -32rem;
+          top: -2.4rem;
+        }
+      }
+    }
+    .top-right-header {
+      ul {
+        @include dflex;
+        li {
+          @include lstyle;
+          a {
+            @include lstyle;
+            color: $primary-text;
+          }
+        }
+      }
+    }
+  }
+}
+// main header section start
+
+.main-header {
+  background-color: $bgcolor;
+  position: relative;
+  .main-navigation {
+    @include dflex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2rem;
+    font-size: $fsize;
+    .mobile-navbar {
+      background-color: black;
+      color: white;
+      position: absolute;
+      top: 7rem;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999999;
+      margin-left: -4rem;
+      padding: 4rem;
+      display: none;
+      ul li {
+        list-style: none;
+        padding: 16px;
+        border-top: 1px solid grey;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+    .burger {
+      display: none;
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+        position: absolute;
+        top: 2.2rem;
+      }
+    }
+    .left-header {
+      ul {
+        @include dflex;
+        gap: 3rem;
+        li {
+          @include lstyle;
+          gap: 3rem;
+          font-size: 1.4rem;
+          a {
+            @include lstyle;
+            color: $primary-text2;
+            font-weight: bold;
+            &:hover {
+              color: $primary-text3;
+            }
+          }
+        }
+      }
+    }
+    .logo {
+      width: 20rem;
+      img {
+        width: 100%;
+      }
+    }
+    .mobile-search {
+      color: $primary-text2;
+      font-size: 1.6rem;
+      display: none;
+    }
+    .right-header {
+      ul {
+        @include dflex;
+        li {
+          @include lstyle;
+          font-size: 1.4rem;
+          gap: 3rem;
+          a {
+            @include lstyle;
+            color: $primary-text2;
+            font-weight: bold;
+            &:hover {
+              color: $primary-text3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// sunglasses section start
+.sunglass-card{
+    h4{
+        font-size: 2rem;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+    .sunglasses-box{
+        display: flex;
+        gap: 2rem;
+        .sunglasses-image{
+            width: 25%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+// trending style sectio start
+.trending-style{
+    margin-top: 3rem;
+    h4{
+        font-size: 2rem;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+    .trending-style-card{
+        display: flex;
+        gap: 2rem;
+        .trending-style-image{
+            width: 33.33%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+// popular shapes section start
+.popular-shapes{
+    margin-top: 3rem;
+    h4{
+        font-size: 2rem;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+    .popular-shapes-card{
+        display: flex;
+        gap: 2rem;
+        margin: 0 2.2rem;
+        .popular-shapes-images{
+            width: 25%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+// gaming glass section start
+.gaming-glass{
+    width: 100%;
+    margin: 3rem 0;
+    img{
+        width: 100%;
+    }
+}
+// popular sunglass sction start
+.popular-sunglass{
+    margin-top: 3rem;
+    h4{
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        text-align: left;
+    }
+    .popular-sunglass-card{
+        display: flex;
+        gap: 2rem;
+        margin: 0 2.2rem;
+        .popular-sunglass-image{
+            width: 25%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+// sunglasses fetures section start
+.sunglass-features{
+    margin-top: 3rem;
+    h4{
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        text-align: left;
+    }
+    .sunglasses-features-card{
+        display: flex;
+        gap: 2rem;
+        .sunglasses-features-images{
+            width: 33.33%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+// customer section start
+.customer{
+  background-color: $primary-text;
+  padding: 3rem;
+  margin-top: 2rem;
+  .customer-card{
+    display: flex;
+    justify-content: space-evenly;
+    .customer-box{
+      p{
+        font-size: 2rem;
+        .fa{
+          font-size: 2.2rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+// chat-icon section start
+.chat-icon{
+  position: fixed;
+  width: 6.2rem;
+  bottom: 6rem;
+  right: 4rem;
+  img{
+    width: 100%;
+  }
+}
+// footer section start
+.footer-services {
+    background-color: $bgcolor;
+    padding: 2.5rem;
+    .footer-card {
+      display: flex;
+    }
+    .footer-data {
+      display: flex;
+      color: $primary-text2;
+      width: 70%;
+      gap: 2rem;
+      .footer-box {
+        ul {
+          .footer-bold-head {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+          }
+          li {
+            list-style: none;
+            font-size: 1.4rem;
+            line-height: 4rem;
+            &:hover {
+              color: $primary-text3;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .download-platform {
+      margin-left: 4rem;
+      width: 30%;
+      color: $primary-text2;
+      h6 {
+        margin-bottom: 1.5em;
+        font-size: 1.2rem;
+      }
+      .download-icons {
+        width: 15rem;
+        display: flex;
+        gap: 3rem;
+        img {
+          width: 100%;
+        }
+      }
+      .social-media {
+        P {
+          font-size: 1.6rem;
+          display: inline-block;
+          margin-top: 2rem;
+          font-weight: bold;
+        }
+        .fa {
+          font-size: 1.6rem;
+          margin: 0 1rem;
+        }
+      }
+      .help {
+        p {
+          font-size: 1.6rem;
+          margin-top: 2rem;
+          font-weight: bold;
+        }
+      }
+      .whatsapp {
+        font-size: 1.6rem;
+        p {
+          margin-top: 2rem;
+          display: inline-block;
+          margin-right: 1rem;
+          span {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  // welcome to fastrack
+
+  .welcome-to-fastrack {
+    background-color: $primary-text;
+    border-radius: 1rem;
+    width: 38rem;
+    border: 0.2rem solid black;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    overflow: hidden;
+    display: none;
+    // display: none;
+    .chat-card {
+      @include dflex;
+      width: 100%;
+      padding: 1.2rem;
+      background-color: $primary-text7;
+      .three-dot,
+      .heading,
+      .minmize {
+        font-size: 2rem;
+        color: $primary-text2;
+      }
+    }
+    .chat-form {
+      margin: 2rem 2rem 4rem 2rem;
+      background-color: $primary-text2;
+      padding: 3rem;
+      border-radius: 1rem;
+      P{
+        font-size: 1.6rem;
+        margin: 1.2rem 0;
+      }
+    .whatsapp-request{
+      margin-bottom: 1.2rem;
+      p {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+        width: 80%;
+      }
+      .yes,.no{
+        width: 100%;
+        font-size: 1.6rem;
+      }
+    }
+      form {
+        lable {
+          font-size: 1.6rem;
+          margin-bottom: 0.5rem;
+          margin-top: 2rem;
+        }
+        #name,
+        #phone,
+        #email,
+        #caegory {
+          width: 100%;
+          padding: 0.8rem;
+          border-radius: 0.6rem;
+          border: 0.1rem solid black;
+          margin-bottom: 1rem;
+          outline: blue;
+          background-color: $primary-text6;
+        }
+        button {
+          background-color: $primary-text7;
+          width: 100%;
+          text-align: center;
+          padding: 1.2rem 0.8rem;
+          color: $primary-text2;
+          border: transparent;
+          border-radius: 1rem;
+          margin-top: 2rem;
+        }
+      }
+      &::after {
+        content: "";
+        position: relative;
+        z-index: 1;
+        background-image: url(../images/user1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        top: -54.7rem;
+        left: 13rem;
+      }
+    }
+  }
+  @media only screen and (max-width:1200px){
+    .footer-services {
+      .footer-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .footer-data {
+          width: 100%;
+          flex-wrap: wrap;
+        }
+        .download-platform {
+          width: 100%;
+        }
+      }
+    }
+  }

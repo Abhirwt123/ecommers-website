@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.small-container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.header-upside {
+  background-color: #222;
+  border-bottom: 0.2rem solid rgb(201, 191, 191);
+}
+.header-upside .m-text {
+  display: none;
+}
+.header-upside .header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+}
+.header-upside .header-top .top-left-header p {
+  color: rgb(201, 191, 191);
+}
+.header-upside .header-top .top-left-header p i {
+  margin-right: 1rem;
+}
+.header-upside .header-top .top-left-header .search-box {
+  display: none;
+}
+.header-upside .header-top .top-left-header .search-box #search-here {
+  width: 35rem;
+  padding: 1.2rem;
+  outline: none;
+  margin-top: 2rem;
+}
+.header-upside .header-top .top-left-header .search-box::after {
+  content: "";
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background-image: url(../images/up-arrow.png);
+  width: 2.4rem;
+  height: 2.4rem;
+  left: -32rem;
+  top: -2.4rem;
+}
+.header-upside .header-top .top-right-header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.header-upside .header-top .top-right-header ul li {
+  list-style: none;
+  text-decoration: none;
+}
+.header-upside .header-top .top-right-header ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: rgb(201, 191, 191);
+}
+
+.main-header {
+  background-color: #222;
+  position: relative;
+}
+.main-header .main-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+.main-header .main-navigation .mobile-navbar {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 7rem;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999999;
+  margin-left: -4rem;
+  padding: 4rem;
+  display: none;
+}
+.main-header .main-navigation .mobile-navbar ul li {
+  list-style: none;
+  padding: 16px;
+  border-top: 1px solid grey;
+  font-size: 12px;
+  font-weight: bold;
+}
+.main-header .main-navigation .burger {
+  display: none;
+}
+.main-header .main-navigation .burger img {
+  width: 3.2rem;
+  height: 3.2rem;
+  position: absolute;
+  top: 2.2rem;
+}
+.main-header .main-navigation .left-header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  gap: 3rem;
+}
+.main-header .main-navigation .left-header ul li {
+  list-style: none;
+  text-decoration: none;
+  gap: 3rem;
+  font-size: 1.4rem;
+}
+.main-header .main-navigation .left-header ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.main-header .main-navigation .left-header ul li a:hover {
+  color: #ed944b;
+}
+.main-header .main-navigation .logo {
+  width: 20rem;
+}
+.main-header .main-navigation .logo img {
+  width: 100%;
+}
+.main-header .main-navigation .mobile-search {
+  color: #fff;
+  font-size: 1.6rem;
+  display: none;
+}
+.main-header .main-navigation .right-header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.main-header .main-navigation .right-header ul li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.4rem;
+  gap: 3rem;
+}
+.main-header .main-navigation .right-header ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.main-header .main-navigation .right-header ul li a:hover {
+  color: #ed944b;
+}
+
+.sunglass-card h4 {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.sunglass-card .sunglasses-box {
+  display: flex;
+  gap: 2rem;
+}
+.sunglass-card .sunglasses-box .sunglasses-image {
+  width: 25%;
+}
+.sunglass-card .sunglasses-box .sunglasses-image img {
+  width: 100%;
+}
+
+.trending-style {
+  margin-top: 3rem;
+}
+.trending-style h4 {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.trending-style .trending-style-card {
+  display: flex;
+  gap: 2rem;
+}
+.trending-style .trending-style-card .trending-style-image {
+  width: 33.33%;
+}
+.trending-style .trending-style-card .trending-style-image img {
+  width: 100%;
+}
+
+.popular-shapes {
+  margin-top: 3rem;
+}
+.popular-shapes h4 {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.popular-shapes .popular-shapes-card {
+  display: flex;
+  gap: 2rem;
+  margin: 0 2.2rem;
+}
+.popular-shapes .popular-shapes-card .popular-shapes-images {
+  width: 25%;
+}
+.popular-shapes .popular-shapes-card .popular-shapes-images img {
+  width: 100%;
+}
+
+.gaming-glass {
+  width: 100%;
+  margin: 3rem 0;
+}
+.gaming-glass img {
+  width: 100%;
+}
+
+.popular-sunglass {
+  margin-top: 3rem;
+}
+.popular-sunglass h4 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+.popular-sunglass .popular-sunglass-card {
+  display: flex;
+  gap: 2rem;
+  margin: 0 2.2rem;
+}
+.popular-sunglass .popular-sunglass-card .popular-sunglass-image {
+  width: 25%;
+}
+.popular-sunglass .popular-sunglass-card .popular-sunglass-image img {
+  width: 100%;
+}
+
+.sunglass-features {
+  margin-top: 3rem;
+}
+.sunglass-features h4 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+.sunglass-features .sunglasses-features-card {
+  display: flex;
+  gap: 2rem;
+}
+.sunglass-features .sunglasses-features-card .sunglasses-features-images {
+  width: 33.33%;
+}
+.sunglass-features .sunglasses-features-card .sunglasses-features-images img {
+  width: 100%;
+}
+
+.customer {
+  background-color: rgb(201, 191, 191);
+  padding: 3rem;
+  margin-top: 2rem;
+}
+.customer .customer-card {
+  display: flex;
+  justify-content: space-evenly;
+}
+.customer .customer-card .customer-box p {
+  font-size: 2rem;
+}
+.customer .customer-card .customer-box p .fa {
+  font-size: 2.2rem;
+  margin-right: 1rem;
+}
+
+.chat-icon {
+  position: fixed;
+  width: 6.2rem;
+  bottom: 6rem;
+  right: 4rem;
+}
+.chat-icon img {
+  width: 100%;
+}
+
+.footer-services {
+  background-color: #222;
+  padding: 2.5rem;
+}
+.footer-services .footer-card {
+  display: flex;
+}
+.footer-services .footer-data {
+  display: flex;
+  color: #fff;
+  width: 70%;
+  gap: 2rem;
+}
+.footer-services .footer-data .footer-box ul .footer-bold-head {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+.footer-services .footer-data .footer-box ul li {
+  list-style: none;
+  font-size: 1.4rem;
+  line-height: 4rem;
+}
+.footer-services .footer-data .footer-box ul li:hover {
+  color: #ed944b;
+  cursor: pointer;
+}
+.footer-services .download-platform {
+  margin-left: 4rem;
+  width: 30%;
+  color: #fff;
+}
+.footer-services .download-platform h6 {
+  margin-bottom: 1.5em;
+  font-size: 1.2rem;
+}
+.footer-services .download-platform .download-icons {
+  width: 15rem;
+  display: flex;
+  gap: 3rem;
+}
+.footer-services .download-platform .download-icons img {
+  width: 100%;
+}
+.footer-services .download-platform .social-media P {
+  font-size: 1.6rem;
+  display: inline-block;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+.footer-services .download-platform .social-media .fa {
+  font-size: 1.6rem;
+  margin: 0 1rem;
+}
+.footer-services .download-platform .help p {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+.footer-services .download-platform .whatsapp {
+  font-size: 1.6rem;
+}
+.footer-services .download-platform .whatsapp p {
+  margin-top: 2rem;
+  display: inline-block;
+  margin-right: 1rem;
+}
+.footer-services .download-platform .whatsapp p span {
+  text-decoration: underline;
+}
+
+.welcome-to-fastrack {
+  background-color: rgb(201, 191, 191);
+  border-radius: 1rem;
+  width: 38rem;
+  border: 0.2rem solid black;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  overflow: hidden;
+  display: none;
+}
+.welcome-to-fastrack .chat-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  padding: 1.2rem;
+  background-color: rgb(248, 150, 68);
+}
+.welcome-to-fastrack .chat-card .three-dot,
+.welcome-to-fastrack .chat-card .heading,
+.welcome-to-fastrack .chat-card .minmize {
+  font-size: 2rem;
+  color: #fff;
+}
+.welcome-to-fastrack .chat-form {
+  margin: 2rem 2rem 4rem 2rem;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+.welcome-to-fastrack .chat-form P {
+  font-size: 1.6rem;
+  margin: 1.2rem 0;
+}
+.welcome-to-fastrack .chat-form .whatsapp-request {
+  margin-bottom: 1.2rem;
+}
+.welcome-to-fastrack .chat-form .whatsapp-request p {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  width: 80%;
+}
+.welcome-to-fastrack .chat-form .whatsapp-request .yes, .welcome-to-fastrack .chat-form .whatsapp-request .no {
+  width: 100%;
+  font-size: 1.6rem;
+}
+.welcome-to-fastrack .chat-form form lable {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+.welcome-to-fastrack .chat-form form #name,
+.welcome-to-fastrack .chat-form form #phone,
+.welcome-to-fastrack .chat-form form #email,
+.welcome-to-fastrack .chat-form form #caegory {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  border: 0.1rem solid black;
+  margin-bottom: 1rem;
+  outline: blue;
+  background-color: rgba(231, 220, 220, 0.877);
+}
+.welcome-to-fastrack .chat-form form button {
+  background-color: rgb(248, 150, 68);
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem 0.8rem;
+  color: #fff;
+  border: transparent;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+.welcome-to-fastrack .chat-form::after {
+  content: "";
+  position: relative;
+  z-index: 1;
+  background-image: url(../images/user1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 3.2rem;
+  height: 3.2rem;
+  top: -54.7rem;
+  left: 13rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer-services .footer-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footer-services .footer-card .footer-data {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .footer-services .footer-card .download-platform {
+    width: 100%;
+  }
+}/*# sourceMappingURL=eyeglass.css.map */

@@ -1,0 +1,885 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./mixin.scss";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+.header-upside {
+  background-color: $bgcolor;
+  border-bottom: 0.2rem solid $primary-text;
+  .m-text {
+    display: none;
+  }
+  .header-top {
+    @include dflex;
+    justify-content: space-between;
+    font-size: $fsize-small;
+    padding: 1.5rem;
+
+    .top-left-header {
+      ul {
+        @include dflex;
+        li {
+          @include lstyle;
+          a {
+            @include lstyle;
+            color: $primary-text;
+          }
+        }
+      }
+    }
+    .top-right-header {
+      ul {
+        @include dflex;
+        li {
+          @include lstyle;
+          a {
+            @include lstyle;
+            color: $primary-text;
+          }
+        }
+      }
+    }
+  }
+}
+// main header section start
+
+.main-header {
+  background-color: $bgcolor;
+  position: relative;
+  .main-navigation {
+    @include dflex;
+    gap: 3rem;
+    padding: 2rem;
+    font-size: $fsize;
+    .mobile-navbar {
+      background-color: black;
+      color: white;
+      position: absolute;
+      top: 7rem;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999999;
+      margin-left: -4rem;
+      padding: 4rem;
+      display: none;
+      ul li {
+        list-style: none;
+        padding: 16px;
+        border-top: 1px solid grey;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+    .burger {
+      display: none;
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+        position: absolute;
+        top: 2.2rem;
+      }
+      .cross{
+        display: none
+      }
+    }
+    .left-header {
+      ul {
+        @include dflex;
+        li {
+          @include lstyle;
+          a {
+            @include lstyle;
+            color: $primary-text2;
+            font-weight: bold;
+            &:hover {
+              color: $primary-text3;
+            }
+          }
+        }
+      }
+    }
+    .logo {
+      width: 20rem;
+      img {
+        width: 100%;
+      }
+    }
+    .mobile-search {
+      color: $primary-text2;
+      font-size: 1.6rem;
+      display: none;
+    }
+    .right-header {
+      ul {
+        @include dflex;
+        li {
+          @include lstyle;
+          a {
+            @include lstyle;
+            color: $primary-text2;
+            font-weight: bold;
+            &:hover {
+              color: $primary-text3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// FASTRACK ESSENTIALS scrion start
+.essentials {
+  background-color: $slider-color;
+  padding: 4rem;
+  h5 {
+    @include boldheading;
+  }
+}
+// fastrack video section start
+// trending section start
+.trending {
+  background-image: -webkit-linear-gradient(top, #fff 50%, #222 50%);
+  h5 {
+    @include boldheading;
+  }
+  .trending-image-card {
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    padding: 0rem 3rem;
+    .trending-image-box {
+      width: 33.33%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+// smart watches section start
+// .smart-watches {
+//   .smart-card{
+//      position: relative;
+//   }
+//   .smart-watch-box {
+//     width: 50%;
+//     background-color: $bgcolor;
+//     height: 102rem;
+//     h5 {
+//       @include boldheading;
+//       color: $primary-text2;
+//       padding: 20rem 6rem 2rem 6rem;
+//     }
+//     p {
+//       font-size: 1.6rem;
+//       text-align: center;
+//       text-decoration: underline;
+//       color: $primary-text2;
+//     }
+//   }
+//   .smart-watch-banner {
+//     width: 67rem;
+//     position: absolute;
+//     top: 6.4rem;
+//     right: 57px;
+//     img {
+//       width: 100%;
+//     }
+//   }
+//   .proud-banner {
+//     width: 67rem;
+//     position: absolute;
+//     bottom: 4rem;
+//     left: 14rem;
+//     img {
+//       width: 100%;
+//     }
+//   }
+//   .about-pride {
+//     width: 42rem;
+//     position: absolute;
+//     right: 7rem;
+//     bottom: 16rem;
+//     p {
+//       font-size: 2.2rem;
+//       text-align: center;
+//       font-weight: bold;
+//       margin-bottom: 1rem;
+//     }
+//     .know-more {
+//       font-size: 1.6rem;
+//       text-decoration: underline;
+//     }
+//   }
+// }
+.smart-watches {
+  margin-top: 2rem;
+  .smart-card {
+    background-image: -webkit-linear-gradient(left, #222 50%, #fff 50%);
+    padding: 4rem;
+    .get-yourself {
+      display: flex;
+      .get-yourself-details {
+        width: 45%;
+        padding: 2rem;
+        padding-top: 12rem;
+        text-align: center;
+        p {
+          font-size: 2.2rem;
+          color: $primary-text2;
+          margin-bottom: 2rem;
+          font-weight: bold;
+        }
+        .enroll-now {
+          font-size: 1.6rem;
+          text-decoration: underline;
+        }
+      }
+      .get-yourself-image {
+        width: 55%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .proud-box {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 6rem;
+    .proud-details {
+      width: 45%;
+      padding: 2rem;
+      padding-top: 12rem;
+      text-align: center;
+    }
+    p {
+      font-size: 2.2rem;
+      color: black;
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+    .now-more {
+      font-size: 1.6rem;
+      text-decoration: underline;
+    }
+    .proud-image {
+      width: 55%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+// watch collection start
+.watch-collection {
+  background-image: -webkit-linear-gradient(top, #fff 50%, #222 50%);
+  .watch-collection-card {
+    h5 {
+      @include boldheading;
+    }
+    .watch-collection-images {
+      display: flex;
+      justify-content: center;
+      gap: 0rem;
+      .watch-collection-box {
+        width: 33.33%;
+        padding: 2rem;
+        img {
+          width: 100%;
+        }
+      }
+      h6 {
+        font-size: 2rem;
+        text-align: center;
+        color: $primary-text3;
+        margin-top: 2rem;
+        font-weight: bold;
+      }
+      p {
+        text-align: center;
+        font-size: 1.2rem;
+        color: $primary-text2;
+        width: 30rem;
+        margin: auto;
+      }
+    }
+  }
+}
+// follow us section
+.follow-us {
+  margin-top: 6rem;
+  position: relative;
+  margin-bottom: 4rem;
+  h5 {
+    @include boldheading;
+  }
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "I1 I1 I2 I3 I4"
+      "I1 I1 I5 I6 I7"
+      "I8 I9 I10 I11 I11"
+      "I12 I13 I14 I11 I11";
+    gap: 2rem;
+    .grid-items {
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        background-image: url(../images/instagram-logo.png);
+        width: 3.2rem;
+        height: 3.2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        right: 127px;
+        top: 170px;
+      }
+      img {
+        width: 100%;
+        &:hover {
+          filter: brightness(30%);
+          cursor: pointer;
+        }
+      }
+    }
+    .grid-item1 {
+      grid-area: I1;
+    }
+    .grid-item2 {
+      grid-area: I2;
+    }
+    .grid-item3 {
+      grid-area: I3;
+    }
+    .grid-item4 {
+      grid-area: I4;
+    }
+    .grid-item5 {
+      grid-area: I5;
+    }
+    .grid-item6 {
+      grid-area: I6;
+    }
+    .grid-item7 {
+      grid-area: I7;
+    }
+    .grid-item8 {
+      grid-area: I8;
+    }
+    .grid-item9 {
+      grid-area: I9;
+    }
+    .grid-item10 {
+      grid-area: I10;
+    }
+    .grid-item11 {
+      grid-area: I11;
+    }
+    .grid-item12 {
+      grid-area: I12;
+    }
+    .grid-item13 {
+      grid-area: I13;
+    }
+    .grid-item14 {
+      grid-area: I14;
+    }
+  }
+  .grid-btn {
+    @include dflex;
+    .btn {
+      padding: 1rem;
+      font-size: 1.6rem;
+      margin-top: 3rem;
+    }
+  }
+}
+// footer section start
+// nearby setion start
+.nearby-stores {
+  background-color: $primary-text4;
+  width: 100%;
+  padding: 2rem;
+  h5 {
+    @include boldheading;
+  }
+  .nearby-card {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    .location {
+      background-color: $bgcolor;
+      padding: 2rem 4rem;
+      color: $primary-text2;
+      font-size: 1.2rem;
+    }
+    .pincode {
+      #our-pincode,
+      #search-area {
+        padding: 2rem;
+        outline: none;
+        appearance: none;
+        border: transparent;
+        appearance: none;
+      }
+    }
+  }
+}
+.return-policie {
+  background-color: $bgcolor;
+  width: 100%;
+  color: $primary-text2;
+  .policie-card {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    padding: 2.5rem;
+    .policie-box {
+      .policie-heading {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .policie-details {
+        font-size: 1.4rem;
+        text-align: center;
+        width: 30rem;
+      }
+    }
+  }
+}
+// online stores section start
+.online-stores {
+  color: $primary-text5;
+  padding: 2rem;
+  h6 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+}
+// fixed icon seaction start
+.fixed-icon {
+  width: 6rem;
+  position: fixed;
+  bottom: 8rem;
+  right: 2rem;
+  img {
+    width: 100%;
+  }
+}
+// footer services section start
+.footer-services {
+  background-color: $bgcolor;
+  padding: 2.5rem;
+  .footer-card {
+    display: flex;
+  }
+  .footer-data {
+    display: flex;
+    color: $primary-text2;
+    width: 70%;
+    gap: 2rem;
+    .footer-box {
+      ul {
+        .footer-bold-head {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+          font-weight: bold;
+        }
+        li {
+          list-style: none;
+          font-size: 1.4rem;
+          line-height: 4rem;
+          &:hover {
+            color: $primary-text3;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .download-platform {
+    margin-left: 4rem;
+    width: 30%;
+    color: $primary-text2;
+    h6 {
+      margin-bottom: 1.5em;
+      font-size: 1.2rem;
+    }
+    .download-icons {
+      width: 15rem;
+      display: flex;
+      gap: 3rem;
+      img {
+        width: 100%;
+      }
+    }
+    .social-media {
+      P {
+        font-size: 1.6rem;
+        display: inline-block;
+        margin-top: 2rem;
+        font-weight: bold;
+      }
+      .fa {
+        font-size: 1.6rem;
+        margin: 0 1rem;
+      }
+    }
+    .help {
+      p {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+        font-weight: bold;
+      }
+    }
+    .whatsapp {
+      font-size: 1.6rem;
+      p {
+        margin-top: 2rem;
+        display: inline-block;
+        margin-right: 1rem;
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//  popup desgine wsection start
+
+.popup {
+  display:none;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+ .popup-desgin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.438);
+  position: fixed;
+  .popup-card {
+    display: flex;
+    gap: 2rem;
+    background-color: white;
+    width: 80%;
+    .popup-image {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    .popup-form {
+      padding: 2rem;
+      width: 50%;
+      position: relative;
+      .form {
+        display: flex;
+      }
+      h6 {
+        margin-top: 2rem;
+        font-size: 3.2rem;
+        margin-bottom: 4rem;
+        span {
+          font-size: 2.2rem;
+        }
+      }
+      #cars {
+        padding: 1.2rem;
+        width: 15%;
+        border: 1px solid black;
+      }
+      #phone-number {
+        padding: 1.2rem;
+        margin-left: 1.2rem;
+        border: 1px solid black;
+        width: 80%;
+      }
+      P {
+        font-size: 1.6rem;
+        margin-top: 4rem;
+        font-weight: bold;
+      }
+      .btn {
+        background-color: $bgcolor;
+        color: $primary-text2;
+        border: none;
+        width: 100%;
+        padding: 1.2rem;
+        margin-top: 4rem;
+        font-weight: bold;
+      }
+      .white-box{
+       width: 3rem;
+       height: 3rem;
+       background-color: $primary-text2;
+       position: absolute;
+       top: 0;
+       right: -3rem;
+       &::before {
+        content: "";
+        background-image: url(../images/close.png);
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        background-repeat: no-repeat;
+        right: -6.8px;
+         top: 0.8rem;
+      }
+      }
+    }
+  }
+}
+}
+
+// welcome to flastrack section start
+
+.welcome-to-fastrack {
+  background-color: $primary-text6;
+  border-radius: 1rem;
+  width: 38rem;
+  border: 0.2rem solid black;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  overflow: hidden;
+  display: none;
+  .chat-card {
+    @include dflex;
+    width: 100%;
+    padding: 1.2rem;
+    background-color: $primary-text2;
+    .three-dot,
+    .heading,
+    .minmize {
+      font-size: 2rem;
+      background-color: $primary-text2;
+    }
+  }
+  .chat-form {
+    margin: 2rem 2rem 4rem 2rem;
+    background-color: $primary-text2;
+    padding: 3rem;
+    border-radius: 1rem;
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+    }
+    form {
+      lable {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+        margin-top: 2rem;
+      }
+      #name,
+      #phone,
+      #email,
+      #caegory {
+        width: 100%;
+        padding: 0.8rem;
+        border-radius: 0.6rem;
+        border: 0.1rem solid black;
+        margin-bottom: 1rem;
+        outline: blue;
+        background-color: $primary-text6;
+      }
+      button {
+        background-color: $btn-color;
+        width: 100%;
+        text-align: center;
+        padding: 1.2rem 0.8rem;
+        color: $primary-text2;
+        border: transparent;
+        border-radius: 1rem;
+        margin-top: 2rem;
+      }
+    }
+    &::after {
+      content: "";
+      position: relative;
+      z-index: 1;
+      background-image: url(../images/user.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 3.2rem;
+      height: 3.2rem;
+      top: -40rem;
+      left: 13rem;
+    }
+  }
+}
+
+// media query start
+
+@media only screen and (max-width: 1200px) {
+  .header-upside {
+    .header-top {
+      justify-content: space-between;
+      .top-left-header,
+      .top-right-header {
+        display: none;
+      }
+      .m-text {
+        display: block;
+        color: $primary-text2;
+      }
+    }
+  }
+  .main-header {
+    .main-navigation {
+      justify-content: space-between;
+      .burger {
+        display: block;
+      }
+      .left-header {
+        display: none;
+      }
+      .right-header {
+        display: none;
+      }
+      .mobile-search {
+        display: block;
+      }
+    }
+  }
+  .smart-watches {
+    .smart-card {
+      .smart-watch-box {
+        width: 100%;
+        margin-top: 25rem;
+        height: 70rem;
+      }
+      .smart-watch-banner {
+        top: -22.6rem;
+        right: 19.2rem;
+      }
+      .proud-banner {
+        bottom: -8rem;
+        left: 22rem;
+      }
+      .about-pride {
+        width: 66rem;
+        right: 23rem;
+        bottom: -22rem;
+      }
+    }
+  }
+
+  .watch-collection {
+    .watch-collection-card {
+      .watch-collection-images {
+        .watch-collection-box {
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 998px) {
+  html {
+    font-size: 55%;
+  }
+  .main-header {
+    .left-header {
+      display: none;
+    }
+    .right-header {
+      display: none;
+    }
+  }
+  .return-policie {
+    .policie-card {
+      flex-wrap: wrap;
+    }
+  }
+
+  .footer-services {
+    .footer-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      .footer-data {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .download-platform {
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+  .smart-watches{
+    .smart-card{
+      background-image: none;
+      padding: 0;
+      .get-yourself{
+        flex-direction: column-reverse;
+        .get-yourself-details{
+          width: 100%;
+          padding-top: 2rem;
+          background-color: #222;
+          p{
+            font-weight: bold;
+          }
+        }
+        .get-yourself-image{
+          width: 100%;
+          background-image: -webkit-linear-gradient(bottom, #222 50%, #fff 50%);
+          img{
+            padding: 2rem;
+          }
+        }
+      }
+      .proud-box{
+        flex-direction: column-reverse;
+        margin-top: 0;
+        .proud-image{
+          background-image: -webkit-linear-gradient(top, #222 50%, #fff 50%);
+          width: 100%;
+          img{
+            padding: 2rem;
+          }
+        }
+        .proud-details{
+          padding-top: 0;
+          width: 100%;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

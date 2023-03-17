@@ -1,0 +1,17 @@
+@mixin dflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+@mixin lstyle{
+    list-style: none;
+    text-decoration: none;
+}
+@mixin boldheading{
+    font-size: 3rem;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2.5rem 0rem;
+}
