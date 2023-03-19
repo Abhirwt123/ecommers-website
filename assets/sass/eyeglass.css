@@ -480,4 +480,14 @@ html {
   .footer-services .footer-card .download-platform {
     width: 100%;
   }
+}
+@media only screen and (max-width: 998px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
 }/*# sourceMappingURL=eyeglass.css.map */

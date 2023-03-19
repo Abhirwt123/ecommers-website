@@ -23,7 +23,8 @@
                     <div class="cart m-text">Cart</div>
                     <div class="top-left-header">
                         <p class="secrch-items"><i class="fa fa-search" aria-hidden="true"></i>Search</p>
-                        <div class="search-box"><input type="search" name="" id="search-here" placeholder="Search..."></div>
+                        <div class="search-box"><input type="search" name="" id="search-here" placeholder="Search...">
+                        </div>
                     </div>
                     <div class="top-right-header">
                         <ul>
@@ -287,18 +288,10 @@
         });
         $(function () {
             $(".secrch-items").click(function () {
-                $(".search-box").css("display", "block");
+                $(".search-box").toggle();
             })
-            // $(".secrch-items").on({
-            //     click: function(){
-            //         $(".search-box").css("display", "block");
-            //     },
-            //     click: function(){
-            //         $("body").css("display", "none");
-            //     }
-            // })
         });
-        
+
     </script>
 </body>
 

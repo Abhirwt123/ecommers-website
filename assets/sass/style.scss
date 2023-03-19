@@ -60,20 +60,22 @@ html {
 .main-header {
   background-color: $bgcolor;
   position: relative;
+  z-index: 99999;
   .main-navigation {
     @include dflex;
+    justify-content: space-between;
     gap: 3rem;
     padding: 2rem;
     font-size: $fsize;
     .mobile-navbar {
-      background-color: black;
+      background-color:#222;
       color: white;
-      position: absolute;
-      top: 7rem;
+      position: fixed;
+      top: 7.4rem;
       width: 100vw;
       height: 100vh;
       z-index: 9999999;
-      margin-left: -4rem;
+      left: 0;
       padding: 4rem;
       display: none;
       ul li {
@@ -82,6 +84,11 @@ html {
         border-top: 1px solid grey;
         font-size: 12px;
         font-weight: bold;
+        a{
+          @include lstyle;
+          color: $primary-text2;
+          
+        }
       }
     }
     .burger {
@@ -141,6 +148,12 @@ html {
     }
   }
 }
+.pabsolute{
+  position: fixed;
+  top: 0;
+  background-color: #222;
+  width: 100%;
+}
 // FASTRACK ESSENTIALS scrion start
 .essentials {
   background-color: $slider-color;
@@ -170,61 +183,6 @@ html {
   }
 }
 // smart watches section start
-// .smart-watches {
-//   .smart-card{
-//      position: relative;
-//   }
-//   .smart-watch-box {
-//     width: 50%;
-//     background-color: $bgcolor;
-//     height: 102rem;
-//     h5 {
-//       @include boldheading;
-//       color: $primary-text2;
-//       padding: 20rem 6rem 2rem 6rem;
-//     }
-//     p {
-//       font-size: 1.6rem;
-//       text-align: center;
-//       text-decoration: underline;
-//       color: $primary-text2;
-//     }
-//   }
-//   .smart-watch-banner {
-//     width: 67rem;
-//     position: absolute;
-//     top: 6.4rem;
-//     right: 57px;
-//     img {
-//       width: 100%;
-//     }
-//   }
-//   .proud-banner {
-//     width: 67rem;
-//     position: absolute;
-//     bottom: 4rem;
-//     left: 14rem;
-//     img {
-//       width: 100%;
-//     }
-//   }
-//   .about-pride {
-//     width: 42rem;
-//     position: absolute;
-//     right: 7rem;
-//     bottom: 16rem;
-//     p {
-//       font-size: 2.2rem;
-//       text-align: center;
-//       font-weight: bold;
-//       margin-bottom: 1rem;
-//     }
-//     .know-more {
-//       font-size: 1.6rem;
-//       text-decoration: underline;
-//     }
-//   }
-// }
 .smart-watches {
   margin-top: 2rem;
   .smart-card {
@@ -666,7 +624,7 @@ html {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  z-index: 1;
+  z-index: 99999;
   overflow: hidden;
   display: none;
   .chat-card {
@@ -752,6 +710,7 @@ html {
     }
   }
   .main-header {
+
     .main-navigation {
       justify-content: space-between;
       .burger {

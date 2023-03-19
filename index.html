@@ -50,7 +50,7 @@
                         <ul>
                             <li>WATCHES</li>
                             <li>SMART & AUDIO</li>
-                            <li>EYE WEARE</li>
+                            <li><a href="http://127.0.0.1:5501/fastrack/eyeglass.html">EYE WEARE</a></li>
                             <li>BAGS & MORE</li>
                             <li>PERFUMES</li>
                             <li>OFFERS AND MORE</li>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="logo"><a href="http://127.0.0.1:5501/fastrack/index.html"><img
                                 src="./assets/images/fastrack_logo_white.svg" alt="logo"></a></div>
-                    <div class="search-icon"><a href="#"><i class="fa fa-search mobile-search" aria-hidden="true"></i>
+                    <div class="search-icon"><i class="fa fa-search mobile-search" aria-hidden="true"></i>
                     </div>
                     <div class="right-header">
                         <ul>
@@ -405,20 +405,17 @@
             $(".minmize").click(function () {
                 $(".welcome-to-fastrack").css("display", "none");
             })
-            $(".burger").on({
-                click: function(){
-                    $(this).css("display","block");
-                },
-                click:function(){
-                    $(".mobile-navbar").css("display","block");
-                }
+            $(".burger").click(function () {
+                $(".mobile-navbar").toggle();
             })
             $(".popup-on").click(function () {
                 $(".popup").css("display", "block");
-
             })
             $(".white-box").click(function () {
                 $(".popup").css("display", "none");
+            })
+            $(".burger").click(function () {
+                $(".main-navigation").addClass("pabsolute");
             })
         })
     </script>

@@ -21,8 +21,12 @@ website added slider
  1= in input:numbers how tow hide the arrow
  2= how to hide the bg white color of image in product slider
  3= main navbar the items dosn't take its full width
- 4= popup not working while clicking
  5= how to make the navbar sticky
+
+ --------topic----------
+ difference between document.ready and window.load
+    ------------questions-----
+    off event in jquery
 
 
 
