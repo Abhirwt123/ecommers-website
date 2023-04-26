@@ -13,6 +13,10 @@
 html {
   font-size: 62.5%;
 }
+.error{
+  color: red;
+  font-weight: bold;
+}
 .container {
   max-width: 130rem;
   margin: 0 auto;
@@ -59,7 +63,6 @@ html {
 
 .main-header {
   background-color: $bgcolor;
-  position: relative;
   z-index: 99999;
   .main-navigation {
     @include dflex;
@@ -710,7 +713,7 @@ html {
     }
   }
   .main-header {
-
+     position: relative;
     .main-navigation {
       justify-content: space-between;
       .burger {
@@ -840,5 +843,22 @@ html {
         }
       }
     }
+  }
+}
+.animate{
+  animation: shake 350ms ;
+}
+@keyframes shake{
+  25%{
+    transform:translateX(4px)
+  }
+  50%{
+    transform:translateX(-4px)
+  }
+  75%{
+    transform:translateX(4px)
+  }
+  100%{
+    transform:translateX(-4px)
   }
 }

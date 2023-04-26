@@ -10,6 +10,11 @@ html {
   font-size: 62.5%;
 }
 
+.error {
+  color: red;
+  font-weight: bold;
+}
+
 .container {
   max-width: 130rem;
   margin: 0 auto;
@@ -64,7 +69,6 @@ html {
 
 .main-header {
   background-color: #222;
-  position: relative;
   z-index: 99999;
 }
 .main-header .main-navigation {
@@ -721,6 +725,9 @@ html {
     display: block;
     color: #fff;
   }
+  .main-header {
+    position: relative;
+  }
   .main-header .main-navigation {
     justify-content: space-between;
   }
@@ -827,5 +834,23 @@ html {
     padding-top: 0;
     width: 100%;
     font-weight: bold;
+  }
+}
+.animate {
+  animation: shake 350ms;
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(-4px);
   }
 }/*# sourceMappingURL=style.css.map */

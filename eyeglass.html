@@ -173,13 +173,13 @@
         </div>
         <div class="chat-form">
             <p>Welcome to Fastrack live support. To get started please fill in:</p>
-            <form action="">
+            <form action="" id="valdform">
                 <lable for="name">Name:*</lable>
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="oname" id="name" >
                 <lable for="Phone">Phone:*</lable>
-                <input type="phone" name="phone" id="phone" required>
+                <input type="phone" name="phone" id="phone" >
                 <lable for="email">Email:*</lable>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" >
                 <div class="whatsapp-request">
                     <p>Would you like to receive communication from us on WhatsApp?</p>
                     <div class="yes">
@@ -277,19 +277,60 @@
                 captions: true,
                 auto: true,
             });
-        });
-        $(function () {
             $(".chat-icon").click(function () {
                 $(".welcome-to-fastrack").css("display", "block");
             })
             $(".minmize").click(function () {
                 $(".welcome-to-fastrack").css("display", "none");
             })
-        });
-        $(function () {
             $(".secrch-items").click(function () {
                 $(".search-box").toggle();
             })
+             
+             $("#valdform").submit(function(e){
+                var formData = false;
+                var name =$("#name[name='oname']").val();
+                var phone =$("#phone[name='phone']").val();
+                var email =$("#email[name='email']").val();
+                if(name.length > 3){
+                    $('#name[name="oname"]').next("span").remove();
+                    $('#name[name="oname"]').css({ border: "2px solid green" });
+                   formData= true;                
+                }
+                else{  
+                    $('#name[name="oname"]').css({ border: "2px solid red" });
+                    $('#name[name="oname"]').next("span").remove();
+                    $("#name[name='oname']").append("<span> Name is too short </span>")
+                    formData = false;
+                     return false;  
+                }
+                if(phone.length > 9){
+                    $('#phone[name="phone"]').next("span").remove();
+                    $('#phone[name="phone"]').css({ border: "2px solid green" });
+                    formData= true;                
+                }
+                else{  
+                    $('#phone[name="phone"]').css({ border: "2px solid red" });
+                    $('#phone[name="phone"]').next("span").remove();
+                   $("#phone[name='phone']").after("<span> Fill the number </span>")
+                    formData = false;
+                     return false;  
+                }
+                if(email.length > 5){
+                    $('#email[name="email"]').next("span").remove();
+                    $('#phone[name="phone"]').css({ border: "2px solid green" });
+                    formData= true;                
+                }
+                else{  
+                    $('#email[name="email"]').css({ border: "2px solid red" });
+                    $('#email[name="email"]').next("span").remove();
+                   $("#email[name='email']").after("<span> Type your email hear </span>")
+                    formData = false;
+                     return false;  
+                }
+                
+             })
+          
         });
 
     </script>
