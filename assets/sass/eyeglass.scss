@@ -441,6 +441,9 @@ html {
           margin-bottom: 1rem;
           outline: blue;
           background-color: $primary-text6;
+          span{
+            color: red;
+          }
         }
         button {
           background-color: $primary-text7;
